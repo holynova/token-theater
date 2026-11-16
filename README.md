@@ -2,7 +2,16 @@
 
 一个不需要 API Key 的多终端流式输出模拟器。用于展示与讨论 token/s、首字等待、思考状态和传输节奏如何影响主观体验。
 
-## 运行
+Compare simulated LLM streaming across four interfaces: iPhone chat, a CLI, web chat, and a macOS app. Adjust token speed, first-token delay, and delivery cadence independently, or start with one of eight presets. The demo uses prepared samples and needs no API key.
+
+![Token Theater showing the iPhone and CLI side by side](./assets/screenshot.png)
+
+- [GitHub Repo](https://github.com/holynova/token-theater)
+- Cloudflare Demo（部署验证中）: [token-theater.xiaosang.cc](https://token-theater.xiaosang.cc/)
+
+<img src="./assets/qr.png" width="180" alt="扫码访问 Token Theater 在线体验">
+
+## 运行 / Run locally
 
 ```sh
 npm run dev
@@ -21,6 +30,15 @@ npm run dev
 - 语音场景仅模拟字幕，没有音频输出。
 
 输入提示词只修改界面中的展示问题，回答由预置内容决定，不会调用 LLM。内置 token 单位独立于任何模型 tokenizer。示例思考摘要不是模型内部推理。品牌界面是独立的风格演示，可能与产品当前版本不同。
+
+## 发布 / Deploy
+
+```sh
+npm run deploy:check
+npm run deploy
+```
+
+Cloudflare Workers 提供 `dist/` 静态文件，绑定 `token-theater.xiaosang.cc`。从 GitHub `main` 的同一提交在本地执行部署。
 
 ## 验证
 

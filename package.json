@@ -1,1 +1,12 @@
-{"name":"token-theater","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"python3 -m http.server 4317 --directory dist","test":"node --test tests/engine.test.js"}}
+{
+  "name": "token-theater",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4317 --directory dist",
+    "test": "node --test tests/engine.test.js",
+    "deploy:check": "npx --yes wrangler@4.128.0 deploy --dry-run --config wrangler.jsonc",
+    "deploy": "npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc"
+  }
+}
