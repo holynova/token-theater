@@ -7,7 +7,7 @@ Compare simulated LLM streaming across four interfaces: iPhone chat, a CLI, web 
 ![Token Theater showing the iPhone and CLI side by side](./assets/screenshot.png)
 
 - [GitHub Repo](https://github.com/holynova/token-theater)
-- Cloudflare Demo（部署验证中）: [token-theater.xiaosang.cc](https://token-theater.xiaosang.cc/)
+- Cloudflare Demo（部署验证中）: [xiaosang.cc/token-theater](https://xiaosang.cc/token-theater/)
 
 <img src="./assets/qr.png" width="180" alt="扫码访问 Token Theater 在线体验">
 
@@ -38,7 +38,7 @@ npm run deploy:check
 npm run deploy
 ```
 
-Cloudflare Workers 提供 `dist/` 静态文件，绑定 `token-theater.xiaosang.cc`。从 GitHub `main` 的同一提交在本地执行部署。
+生产入口由作品集的 `xiaosang-portfolio` Worker 提供。将本仓库 `main` 上的 `dist/` 同步到作品集仓库的 `token-theater/`，按[作品集发布流程](https://github.com/holynova/holynova.github.io#发布方式)从 `master` 在本地发布。上面的命令用于单独发布 Worker，需要账户有可用 Worker 和自定义域名配额。
 
 ## 验证
 
