@@ -7,7 +7,7 @@ Compare simulated LLM streaming across four interfaces: iPhone chat, a CLI, web 
 ![Token Theater showing the iPhone and CLI side by side](./assets/screenshot.png)
 
 - [GitHub Repo](https://github.com/holynova/token-theater)
-- Cloudflare Demo（部署验证中）: [xiaosang.cc/token-theater](https://xiaosang.cc/token-theater/)
+- [Cloudflare Demo](https://xiaosang.cc/token-theater/)
 
 <img src="./assets/qr.png" width="180" alt="扫码访问 Token Theater 在线体验">
 
