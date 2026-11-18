@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Token Theater 令牌剧场 — LLM 流式输出速度模拟：iPhone 与 CLI 双屏对比，30 token/s 对 120 token/s">
+  <title>Token Theater 令牌剧场</title>
+  <desc>LLM 流式输出速度模拟器：四个终端界面，双屏同步对比，无需 API Key。</desc>
+
+  <rect width="1200" height="420" rx="20" fill="#F1EEEA"/>
+  <rect width="1200" height="420" rx="20" fill="none" stroke="#DDD5C8" stroke-width="1.5"/>
+
+  <!-- faint token stream, background -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="19" fill="#C9BFB2">
+    <text x="64" y="392">the  quick  brown  fox  跳过  懒狗  token  流式  输出  速度</text>
+  </g>
+
+  <!-- left copy -->
+  <text x="64" y="92" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="600" letter-spacing="4" fill="#9A4A26">LLM 速度体验实验室</text>
+  <text x="62" y="166" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="62" font-weight="700" fill="#2B2622">Token Theater</text>
+  <text x="64" y="206" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="24" font-weight="600" letter-spacing="8" fill="#6B5F54">令 牌 剧 场</text>
+  <text x="64" y="258" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" fill="#4A423A">不用 API Key，对比四个终端的流式输出速度</text>
+  <text x="64" y="292" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" fill="#6B5F54">首字等待、token/s、传输节奏，各自独立可调</text>
+
+  <!-- badges -->
+  <g font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="19" font-weight="600">
+    <rect x="64" y="322" width="110" height="36" rx="18" fill="#9A4A26"/>
+    <text x="119" y="346" text-anchor="middle" fill="#FFFFFF">4 个终端</text>
+    <rect x="186" y="322" width="168" height="36" rx="18" fill="#FFFFFF" stroke="#C9BFB2" stroke-width="1.5"/>
+    <text x="270" y="346" text-anchor="middle" fill="#4A423A">1–300 token/s</text>
+    <rect x="366" y="322" width="132" height="36" rx="18" fill="#FFFFFF" stroke="#C9BFB2" stroke-width="1.5"/>
+    <text x="432" y="346" text-anchor="middle" fill="#4A423A">8 场景预设</text>
+  </g>
+
+  <!-- right: two mini stages -->
+  <g id="phone-stage">
+    <!-- phone stage -->
+    <rect x="660" y="56" width="238" height="308" rx="14" fill="#FFFFFF"/>
+    <rect x="660" y="56" width="238" height="308" rx="14" fill="none" stroke="#DDD5C8" stroke-width="1.5"/>
+    <g font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+      <text x="682" y="92" font-size="19" font-weight="600" fill="#4A423A">iPhone · ChatGPT</text>
+      <text x="876" y="130" font-size="34" font-weight="700" fill="#2B2622" text-anchor="end">30</text>
+      <text x="876" y="152" font-size="17" fill="#6B5F54" text-anchor="end">token / s</text>
+    </g>
+    <!-- phone outline -->
+    <rect x="712" y="168" width="134" height="128" rx="18" fill="none" stroke="#2B2622" stroke-width="3"/>
+    <rect x="752" y="176" width="54" height="10" rx="5" fill="#2B2622"/>
+    <g fill="#C9BFB2">
+      <rect x="726" y="200" width="106" height="8" rx="4"/>
+      <rect x="726" y="216" width="88" height="8" rx="4"/>
+      <rect x="726" y="232" width="106" height="8" rx="4"/>
+      <rect x="726" y="248" width="60" height="8" rx="4"/>
+    </g>
+    <rect x="726" y="268" width="106" height="6" rx="3" fill="#E8E2D8"/>
+    <rect x="726" y="268" width="38" height="6" rx="3" fill="#9A4A26"/>
+    <g font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#6B5F54">
+      <text x="682" y="330">回答耗时</text>
+      <text x="876" y="330" text-anchor="end" font-weight="700" fill="#2B2622">11.1 s</text>
+    </g>
+  </g>
+
+  <g id="terminal-stage">
+    <!-- terminal stage -->
+    <rect x="918" y="56" width="238" height="308" rx="14" fill="#1E1B18"/>
+    <rect x="918" y="56" width="238" height="308" rx="14" fill="none" stroke="#1E1B18" stroke-width="1.5"/>
+    <circle cx="940" cy="80" r="5" fill="#E06C4F"/>
+    <circle cx="956" cy="80" r="5" fill="#E8B93E"/>
+    <circle cx="972" cy="80" r="5" fill="#5FBF6E"/>
+    <g font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+      <text x="940" y="112" font-size="19" font-weight="600" fill="#D8CFC6">CLI · Claude Code</text>
+      <text x="1134" y="152" font-size="34" font-weight="700" fill="#FFFFFF" text-anchor="end">120</text>
+      <text x="1134" y="174" font-size="17" fill="#B8A99C" text-anchor="end">token / s</text>
+    </g>
+    <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="17" fill="#B8A99C">
+      <text x="940" y="212">&gt; 它能帮你做什么？</text>
+      <text x="940" y="238">· 写作与修改</text>
+      <text x="940" y="262">· 解释与学习</text>
+      <text x="940" y="286">· 编程与分析 ▌</text>
+    </g>
+    <g font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#B8A99C">
+      <text x="940" y="330">回答耗时</text>
+      <text x="1134" y="330" text-anchor="end" font-weight="700" fill="#FFFFFF">2.8 s</text>
+    </g>
+  </g>
+</svg>
