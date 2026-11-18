@@ -1,24 +1,24 @@
+<p align="right"><a href="README.en.md">English</a></p>
+
 <p align="center">
   <img src="./assets/readme/hero.svg" width="100%" alt="Token Theater 令牌剧场 — LLM 流式输出速度模拟：iPhone 与 CLI 双屏对比，30 token/s 对 120 token/s">
 </p>
 
 <p align="center">
-  <a href="https://xiaosang.cc/token-theater/">▶ 在线体验 Try Online</a>
+  <a href="https://xiaosang.cc/token-theater/">▶ 在线体验</a>
   ·
   <a href="https://github.com/holynova/token-theater">GitHub 仓库</a>
 </p>
 
 Token Theater 是一个不需要 API Key 的 LLM 流式输出模拟器：把同一份回答放在两个终端里同步播放，对比 token/s、首字等待、思考状态和传输节奏如何影响主观体验。四个终端界面、8 个场景预设，全部用预置内容演示，不调用任何模型。
 
-Token Theater is an LLM streaming simulator that needs no API key: play the same answer on two terminals side by side and feel how token speed, first-token delay, thinking states, and delivery cadence change the experience. Four terminal interfaces, eight scenario presets, all with prepared samples — no model is ever called.
-
-## 截图 / Screenshots
+## 截图
 
 <p align="center">
   <img src="./assets/readme/screenshot.png" width="100%" alt="双屏对比：左侧 iPhone ChatGPT 以 30 token/s 输出，右侧 CLI Claude Code 以 120 token/s 输出，同一份回答耗时 11.1 秒对 2.8 秒">
 </p>
 
-## 功能 / Features
+## 功能
 
 - **四个终端**：iPhone · ChatGPT、CLI · Claude Code、Web · Chatbot、macOS · Codex，各自保留本平台的界面语言（动态岛、终端提示符、窗口控制按钮等）。
 - **双屏同步对比**：两端各选终端与速度，同步播放同一份内容；也可切单屏专注一端。
@@ -30,14 +30,14 @@ Token Theater is an LLM streaming simulator that needs no API key: play the same
 - **播放控制**：暂停、继续、重播；配置可生成 URL 分享。
 - **实时指标**：首字等待、已输出 Token 数、回答耗时，三项实时显示。
 
-## 说明 / Notes
+## 说明
 
 - 输入提示词只修改界面中的展示问题，回答由预置内容决定，不会调用 LLM。
 - 内置 token 单位是确定性的演示分词，不声称匹配任何实际模型的 tokenizer。
 - 示例思考摘要不是模型内部推理；语音场景仅模拟字幕，没有音频输出。
 - 品牌界面是独立的风格演示，可能与产品当前版本不同。
 
-## 本地运行 / Run Locally
+## 本地运行
 
 纯静态 HTML/CSS/JavaScript，零构建、零依赖：
 
@@ -48,7 +48,7 @@ npm run dev
 
 字体在线加载，加载失败时使用系统字体。
 
-## 测试 / Tests
+## 测试
 
 ```bash
 npm test            # 4 项核心计时测试，全部通过
@@ -57,7 +57,7 @@ node --check dist/app.js
 
 测试覆盖中英混合文本无损切分、首包与思考分离、批量输出尾批刷新、网络停顿。
 
-## 技术 / Tech
+## 技术
 
 - 确定性分词与计时引擎（`dist/engine.js`），同一配置每次播放结果一致。
 - 桌面与 390px 移动端均已验证；移动端双屏上下排列。
@@ -70,18 +70,7 @@ dist/engine.js        确定性分词与计时函数
 tests/engine.test.js  计时边界测试
 ```
 
-## 参考 / References
+## 参考
 
 - [OpenAI reasoning models](https://developers.openai.com/api/docs/guides/reasoning)
 - [Anthropic Claude Code](https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously)
-
-## English
-
-**Token Theater** simulates LLM streaming speed across four interfaces — iPhone · ChatGPT, CLI · Claude Code, Web · Chatbot, macOS · Codex — with no API key required. Pick two terminals, set each speed independently (1–300 token/s), and watch the same answer stream side by side.
-
-- **8 scenario presets**: daily chat, deep thinking, pair programming, long English text, search & tools, flaky network, structured data, live voice captions.
-- **4 content types** (Chinese, English, TypeScript, JSON) × 3 lengths; 4 answer modes (direct, thinking summary, thinking-only, simulated tool calls).
-- **Delivery cadence**: smooth, chunked, or periodic network stalls; first-token latency and thinking wait adjustable independently.
-- **Controls**: pause, resume, replay; share any configuration via URL. Live metrics: time to first token, tokens emitted, total answer time.
-- **Honest simulation**: answers come from prepared samples; the token unit is a deterministic demo segmentation, not any real model's tokenizer; thinking summaries are illustrative, not real reasoning.
-- **Run it**: `npm run dev` → http://localhost:4317. Static HTML/CSS/JS, zero build, zero dependencies. Tests: `npm test` (4 passing).
